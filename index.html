@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="container py-5">
+        <div class="up">
+            <h1>Bookmarker</h1>
+        </div>
+
+
+
+        <section class="mt-5 p-3 py-4 mb-4">
+            <h2 class="text-center"> Bookmark your favorite sites </h2>
+
+            <div class="Sitename">
+                <label class="pb-2" for=""> Site Name</label>
+                <input id="bookName" type="text" class="form-control mb-4" placeholder="Bookmarker Name">
+            </div>
+
+            <div class="Price d-flex">
+                <input id="Price"  onkeyup="getTotal()" type="number" class="form-control w-25 d-inline mb-4" placeholder="Price...">
+                <input id="Faxes"  onkeyup="getTotal()" type="number" class="form-control w-25 d-inline mb-4" placeholder="Faxes...">
+                <input id="ads"  onkeyup="getTotal()" type="number" class="form-control w-25 d-inline mb-4" placeholder="Ads...">
+                <input id="discounnt"  onkeyup="getTotal()" type="number" class="form-control w-25 d-inline mb-4" placeholder="Discount...">
+            </div>
+            
+            <div class="btnTotal d-flex">
+                <small id="total" class="m-auto mb-3 p-2 "></small>
+            </div>
+
+            <div class="count">
+                <input id="count" type="number" class="form-control mb-4" placeholder="Count...">
+            </div>
+
+            <div class="Category">
+                <input id="Category" type="text" class="form-control mb-4" placeholder="Category..">
+            </div>
+
+            <div class="Siteurl">
+                <label class="pb-2" for="">Site URL</label>
+                <input id="url" type="text" class="form-control mb-4" placeholder="Website URL">
+            </div>
+
+            <div class="btnSubmit d-flex">
+                <button id="Submit" onclick="addProduct()" class="btn btn-secondary m-auto">Submit</button>
+            </div>
+
+        </section>
+
+        <div class="tb">
+
+            <div class="search">
+                <!-- <input onkeyup="searchElement(this.value)" id="search" type="search" class="form-control" placeholder="Search..."> -->
+                <input  id="search" type="search" class="form-control" placeholder="Search...">
+                <div class="btnSearch  ">
+                    <button onclick="searchName(this.value)" class="btn btn-group  mt-3 me-5 btn-light" id="searchName">Search by Name</button>
+                    <button class="btn btn-group mt-3 btn-light" id="searchCategory">Search by Category</button>
+                </div>
+            </div>
+
+            <table class="table mt-4 text-center">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Website URL</th>
+                        <th>Price</th>
+                        <th>Taxes</th>
+                        <th>Ads</th>
+                        <th>discounnt</th>
+                        <th>Total</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+>
+                <tbody id="tbody">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>Name</td>
+                        <td>link</td>
+                        <td>30$</td>
+                        <td>20$</td>
+                        <td>50$</td>
+                        <td>20$</td>
+                        <td>1200</td>
+    
+                        <td>
+                            <button class="btn btn-warning">Visit</button>
+                        </td>
+                        <td>
+                            <button id="Delete" class="btn btn-danger">Delete</button>
+                        </td>
+                        <td>
+                            <button id="Update" class="btn btn-info">Update</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

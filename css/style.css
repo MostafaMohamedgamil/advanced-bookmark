@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F7ECDE;
+}
+
+::selection {
+    background-color: #FEC260;
+    color: black;
+}
+
+h1 {
+    font-family: Pacifico, cursive;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    margin: auto;
+    width: fit-content;
+    position: relative;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    bottom: 0;
+    background-color: #FEC260;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+h1:hover::before {
+    height: 60%;
+
+}
+
+section {
+    border-top: dotted black 2px;
+    border-bottom: dotted black 2px;
+}
+#total{
+    background-color: #ff0000;
+    color: white;
+    border-radius: 4px;
+}
+#total::before{
+content: 'Total Price: ';
+/* color: white; */
+}
+
+button{
+    text-align: center;
+    transition:0.5s !important;
+}
+button:hover{
+    letter-spacing: 2px ;
+}
+
+.btnSearch{
+    width: fit-content;
+    margin: auto;
+}
